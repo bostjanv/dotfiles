@@ -57,8 +57,6 @@ set smartindent
 set softtabstop=4
 set tabstop=4
 
-set wrap                 " Wrap long lines
-
 " Sane splits
 set splitright
 set splitbelow
@@ -70,7 +68,11 @@ set cursorline
 set nospell
 set noswapfile
 
+set wrap                          " Wrap long lines
+set fillchars+=vert:\             " Don't show pipes in vertical splits
+
 let NERDTreeQuitOnOpen = 1
+let $FZF_DEFAULT_COMMAND = "rg --files --no-ignore-vcs | rg -v \"(^|/)target/\""
 
 "
 " mappings

@@ -91,11 +91,17 @@ nnoremap('<silent><leader>a', '<cmd>lua vim.lsp.buf.code_action()<CR>', true)
 nnoremap('<Leader>rn', '<cmd>lua vim.lsp.buf.rename()<CR>', true)
 nnoremap('<Leader>a', '<cmd>lua vim.lsp.buf.code_action()<CR>', true)
 vnoremap('<Leader>a', '<cmd>lua vim.lsp.buf.range_code_action()<CR>')
-
 nnoremap('<Leader>ld', '<cmd>LspTrouble lsp_definitions<CR>', true)
 nnoremap('<Leader>le',
          '<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>', true)
 nnoremap('<Leader>lE', '<cmd>LspTroubleWorkspaceToggle<CR>', true)
+nnoremap('<Leader>ff', '<cmd>lua vim.lsp.buf.formatting()<CR>', true)
+vnoremap('<Leader>ff', '<cmd>lua vim.lsp.buf.range_formatting()<CR>')
+
+
+vim.api.nvim_command('autocmd FileType c,cpp nnoremap <buffer> <C-h> :ClangdSwitchSourceHeader<CR>')
+--vim.api.nvim_command('autocmd BufEnter NERD_tree_* nnoremap <buffer> <TAB> <TAB>')
+vim.api.nvim_command('autocmd FileType nerdtree nnoremap <buffer> <TAB> <C-W>W')
 
 -- Telescope
 nnoremap('<C-f>', ':lua require("utils/telescope").search_files()<CR>')

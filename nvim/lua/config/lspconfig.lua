@@ -1,15 +1,18 @@
 local lspconfig = require 'lspconfig'
 local setup_auto_format = require('utils.lsp').setup_auto_format
 
-setup_auto_format("dart")
+vim.api.nvim_command('augroup LspAutoFormat')
+vim.api.nvim_command('autocmd!')
 setup_auto_format("rs")
 setup_auto_format("cpp")
 setup_auto_format("hpp")
+setup_auto_format("c")
+setup_auto_format("h")
 setup_auto_format("js")
 setup_auto_format("css")
-setup_auto_format("tsx")
-setup_auto_format("svelte")
 setup_auto_format("py")
+setup_auto_format("lua")
+vim.api.nvim_command('augroup END')
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = true

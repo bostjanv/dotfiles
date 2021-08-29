@@ -3,6 +3,7 @@
 require('general')
 require('mappings')
 require('plugins')
+require('commands')
 --require('statusline')
 
 --require('config/bufferline')

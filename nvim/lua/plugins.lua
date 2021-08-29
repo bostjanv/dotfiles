@@ -28,6 +28,8 @@ require('packer').startup(function(use)
     use 'tomasiser/vim-code-dark'
     -- gruvbox
     use 'morhetz/gruvbox'
+    -- solarized
+    use 'ishan9299/nvim-solarized-lua'
 
     -- Git in the gutter
     use 'lewis6991/gitsigns.nvim'

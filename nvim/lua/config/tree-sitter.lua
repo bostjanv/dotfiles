@@ -17,5 +17,23 @@ require'nvim-treesitter.configs'.setup {
         enable = true,
         use_virtual_text = true,
         lint_events = {"BufWrite", "CursorHold"}
-    }
+    },
+    ensure_installed = {
+        "c",
+        "cpp",
+        "cuda",
+        "go",
+        "rust",
+        "python",
+        "vim",
+        "zig",
+        "bash",
+        "fish",
+        "cmake",
+        "latex",
+        "toml",
+        "json",
+        "yaml",
+        "html",
+  },
 }

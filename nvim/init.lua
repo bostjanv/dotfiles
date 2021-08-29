@@ -7,7 +7,8 @@ require('commands')
 --require('statusline')
 
 --require('config/bufferline')
-require('config/compe')
+--require('config/compe')
+require('config/cmp')
 require('config/flutter-tools')
 require('config/lspconfig')
 require('config/nvim-autopairs')
@@ -17,7 +18,9 @@ require('config/nvim-ts-autotag')
 require('config/rust-tools')
 require('config/telescope')
 require('config/tree-sitter')
+require('config/tree-sitter-context')
 require('config/nerdtree')
+require('config/lualine')
 
 vim.cmd "colorscheme gruvbox"
 vim.opt.guifont='FiraCodeNerdFont'

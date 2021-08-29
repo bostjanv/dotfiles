@@ -6,8 +6,11 @@ require('packer').startup(function(use)
     -- UI STUFF
     -- =====================
     -- Statusline
-    --use 'glepnir/galaxyline.nvim'
-    use 'pacha/vem-statusline'
+    -- use 'pacha/vem-statusline'
+    use {
+      'hoob3rt/lualine.nvim',
+      requires = {'kyazdani42/nvim-web-devicons', opt = true}
+    }
     -- Top buffer/tab line
     --use 'akinsho/nvim-bufferline.lua'
 
@@ -66,10 +69,19 @@ require('packer').startup(function(use)
     use 'neovim/nvim-lspconfig'
     -- completion plugin
     use 'hrsh7th/nvim-compe'
+    use {
+        "hrsh7th/nvim-cmp",
+        requires = {
+            "hrsh7th/vim-vsnip",
+            "hrsh7th/cmp-buffer",
+            "hrsh7th/cmp-nvim-lsp"
+        }
+    }
     -- tree-sitter
     use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
     use 'nvim-treesitter/playground'
     use 'windwp/nvim-ts-autotag'
+    use 'romgrk/nvim-treesitter-context'
     -- Lua dev
     use 'folke/lua-dev.nvim'
     -- flutter
